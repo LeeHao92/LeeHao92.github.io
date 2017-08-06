@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description" content="leehao's bolg"><meta name="keywords" content="Nodejs, Reactjs"><title>git 常用命令 - leehao</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.png"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com/leehao92"><span>Github</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">git 常用命令</h1><ul class="meta"><li><i class="icon icon-author"></i>leehao</li><li><i class="icon icon-clock"></i>5 Minutes</li><li><i class="icon icon-calendar"></i>May 29, 2016</li></ul></div></div><div class="article-content" style="max-width:800px"><hr>
+<h3 id="SVN-集中式服务器"><a href="#SVN-集中式服务器" class="headerlink" title="SVN 集中式服务器"></a>SVN 集中式服务器</h3><ol>
+<li><p>代码库在集中式服务器中</p>
+</li>
+<li><p>干完活再推送到中央服务器</p>
+</li>
+</ol>
+<h3 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h3><ol>
+<li><p>每人的计算机都有自己代码库</p>
+</li>
+<li><p>实现多人协作</p>
+</li>
+</ol>
+<p>A 人修改 文件1，B 人同事修改 文件1</p>
+<p>A 与 B 两人相互推送就可以看到对方的修改。</p>
+<p>在实际开发中并不会 A 与 B 直接交换。</p>
+<p>通常有一个计算机充当交换的媒介。</p>
+<hr>
+<h3 id="git-常用命令"><a href="#git-常用命令" class="headerlink" title="git 常用命令"></a>git 常用命令</h3><ol>
+<li><p>$ pwd #显示当前目录</p>
+</li>
+<li><p>$ git diff readme.md    #查看当前文件修改了什么内容</p>
+<p> 2.1 $ git status #告诉你有文件被修改过，用 git diff filename 可以查看修改内容</p>
+</li>
+<li><p>$ git log     # 可以查看提交 commit 信息</p>
+<p> 3.1 $git log –pretty=oneline        # 简洁显示 哈希值信息</p>
+</li>
+<li><p>$ git rest –hard HEAD^    # 回退到上一次提交的状态，通过 git log 查看，本次提交的信息被清除了</p>
+</li>
+<li><p>$ git rest –hard 版本ID    # 回退到指定版本ID</p>
+</li>
+<li><p>$ git reflog # 记录每一次命令</p>
+</li>
+<li><p>$ git checkout – readme.md # 把工作区的文件回退到最近一次 add 或者 commit 的状态</p>
+</li>
+<li><p>$ ls -al  # 查看当前目录下的所有文件</p>
+</li>
+<li><p>$ git add -A  // add 全部，-A 换成 * 也可以</p>
+</li>
+</ol>
+<h3 id="提交时的用户信息，并不是-github-帐号"><a href="#提交时的用户信息，并不是-github-帐号" class="headerlink" title="提交时的用户信息，并不是 github 帐号"></a>提交时的用户信息，并不是 github 帐号</h3><p>$ git config –global user.name “yourname”</p>
+<p>$ git config –global user.email “your_email@example.com”</p>
+<p>–global 表示在当前机器所有仓库都使用此配置</p>
+<p>在计算机用户目录下有 .gitconfig 文件，保存这些信息。</p>
+<p>如果不配置用户信息，则无法 commit。</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
+<li><p>GIT 只能跟踪文本文件的改动，例如 TXT/HTML/……</p>
+</li>
+<li><p>视频、图片这些二进制文件无法跟踪改动</p>
+</li>
+<li><p>Word 文档也是二进制文件，无法跟踪改动</p>
+</li>
+<li><p>windows 自带笔记本用来保存 UTF-8 文件时，会给每个文件开头默认</p>
+</li>
+</ul>
+<p>添加一个 十六进制 的字符来保存编码格式，建议使用 notepad++</p>
+<ul>
+<li>Git 跟踪并管理的是修改，而非文件。</li>
+</ul>
+<hr>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><h4 id="SSH-登录"><a href="#SSH-登录" class="headerlink" title="SSH 登录"></a>SSH 登录</h4><p>SSH 协议：实现计算机间的安全登录。</p>
+<p>有专门实现 SSH 协议的软件：openssh 软件，实现了 SSH 协议。</p>
+<p>登录命令： ssh  用户名@IP地址</p>
+<h4 id="创建服务器裸仓库"><a href="#创建服务器裸仓库" class="headerlink" title="创建服务器裸仓库"></a>创建服务器裸仓库</h4><p>裸仓库：就是没有工作区的仓库，裸仓库里面的内容就是 .git 文件夹下的文件。</p>
+<p>命令：$ git init –bare</p>
+<h4 id="本机仓库-push-到服务器，push-指定的分支"><a href="#本机仓库-push-到服务器，push-指定的分支" class="headerlink" title="本机仓库 push 到服务器，push 指定的分支"></a>本机仓库 push 到服务器，push 指定的分支</h4><p>命令：$ git  push  用户名:IP:服务器路径  分支</p>
+<p>$ git  push  leehao:192.168.32.02  master</p>
+<p>$ password:</p>
+<h4 id="服务器克隆到本机"><a href="#服务器克隆到本机" class="headerlink" title="服务器克隆到本机"></a>服务器克隆到本机</h4><p>$ git  clone  leehao@192.168.32.02:服务器目录</p>
+<p>$ password:</p>
+<hr>
+<h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><h4 id="分支解释"><a href="#分支解释" class="headerlink" title="分支解释"></a>分支解释</h4><p>git 默认给我们创建了 master 分支。</p>
+<p>命令：$ git branch login    # 创建分支</p>
+<p>$ git checkout -b login        # 创建分支，并且切换分支</p>
+<p>创建新的分支时，最好要切换到主分支在进行创建</p>
+<p>如果在子分支创建分支，子分支可能有 BUG，然后携带到新的分支。</p>
+<p>被创建新的分支后，子分支会继承父分支所有提交的历史。</p>
+<p>在子分支下 通过 git log 可以查看到包括父分支下的所有提交记录。</p>
+<h4 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h4><p>$ git checkout login    # 切换分支后，工作区的代码变成了切换后分支的文件，所以切换分支前，先commit 提交保存。</p>
+<h4 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h4><p>$ git merge login    # 在当前主分支下 和并 login 分支</p>
+<h4 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h4><p>$ branch -d 分支名</p>
+<h4 id="查看所有分支"><a href="#查看所有分支" class="headerlink" title="查看所有分支"></a>查看所有分支</h4><p>$ git branch</p>
+<h4 id="处理冲突"><a href="#处理冲突" class="headerlink" title="处理冲突"></a>处理冲突</h4><p>两个分支合并后，有可能会有冲突，合并后会有提示文件的冲突位置会变成如下格式：</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<p>冲突代码段 1</p>
+<p>===========</p>
+<p>冲突代码段 2</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; 分支名字</p>
+<p>修改冲突的代码后，commit 即可。</p>
+<hr>
+<h3 id="pull-与-clone-的区别"><a href="#pull-与-clone-的区别" class="headerlink" title="pull 与 clone 的区别"></a>pull 与 clone 的区别</h3><h4 id="共同点"><a href="#共同点" class="headerlink" title="共同点"></a>共同点</h4><p>都是把远程仓库的代码下载到本地。</p>
+<h4 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h4><ol>
+<li><p>$ git clone 地址，会把 .git 库也下载到本地</p>
+</li>
+<li><p>$ git push 地址 分支，不会下载 .git 文件夹，需要手动 init 本地目录</p>
+</li>
+</ol>
+<h4 id="git-fetch-与-git-pull"><a href="#git-fetch-与-git-pull" class="headerlink" title="git fetch 与 git pull"></a>git fetch 与 git pull</h4><ol>
+<li><p>fetch 获取远程最新版本，不会自动 merge</p>
+</li>
+<li><p>pull 从远程获取代码，并自动 merge，相当于 fetch + merge 操作</p>
+</li>
+<li><p>fetch 更加安全，可以查看文件后再做 Merge 操作</p>
+</li>
+</ol>
+</div><div class="article-meta" style="max-width:800px"><div class="tags"><i class="icon icon-tag"></i><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">1</span></li></ul></div><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li></ul></div></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cj60a2sjr0002z3nwa3lgroga" data-title="git 常用命令" data-url="http://yoursite.com/2016/05/29/Github/" site-name="leehao"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+var duoshuoQuery = {short_name: siteName};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/2016/11/10/Gulp/"><i class="icon icon-arror-left"></i></a></li><li><a href="/2015/10/10/HTTP/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/leehao92" title="Github" target="_blank"><i class="icon icon-github"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2017 leehao</p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>
