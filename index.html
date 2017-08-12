@@ -1,4 +1,679 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description" content="leehao's bolg"><meta name="keywords" content="Nodejs, Reactjs"><title>leehao - bolg</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.png"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com/leehao92"><span>Github</span></a></li></ul><div class="wrapper" id="wrap"><div class="page-header"><label class="navi-button" for="navi">MENU</label><div class="background"><img src="http://callfiles.ueibo.com/hexo-theme-laughing/page_background.jpg"></div><div class="author"><div class="head"><img src="/avatar.jpeg"></div><h3 class="name">leehao</h3><p class="signature">只有永远躺在泥坑里的人,才不会再掉进坑里. ——G.W.F. Hegel</p></div></div><ul class="post-list" style="max-width:800px"><li> <p class="date">February 3, 2017</p><h4 class="title"><a href="/2017/02/03/CasperJS/">CasperJS 技术笔记</a></h4><div class="excerpt"></div><ul class="meta"><li><i class="icon icon-author"></i>leehao</li><li><i class="icon icon-clock"></i>12 Minutes</li><li><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a><span class="category-list-count">1</span></li></ul></li></ul></li><li> <p class="date">January 12, 2017</p><h4 class="title"><a href="/2017/01/12/PhantomJS/">PhantomJS</a></h4><div class="excerpt"></div><ul class="meta"><li><i class="icon icon-author"></i>leehao</li><li><i class="icon icon-clock"></i>23 Minutes</li><li><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/PhantomJS/">PhantomJS</a><span class="category-list-count">1</span></li></ul></li></ul></li><li> <p class="date">December 10, 2016</p><h4 class="title"><a href="/2016/12/10/React/">React</a></h4><div class="excerpt"></div><ul class="meta"><li><i class="icon icon-author"></i>leehao</li><li><i class="icon icon-clock"></i>37 Minutes</li><li><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a><span class="category-list-count">1</span></li></ul></li></ul></li><li> <p class="date">December 3, 2016</p><h4 class="title"><a href="/2016/12/03/Webpack/">Webpack</a></h4><div class="excerpt"></div><ul class="meta"><li><i class="icon icon-author"></i>leehao</li><li><i class="icon icon-clock"></i>34 Minutes</li><li><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Webpack/">Webpack</a><span class="category-list-count">1</span></li></ul></li></ul></li><li> <p class="date">November 10, 2016</p><h4 class="title"><a href="/2016/11/10/Gulp/">Gulp 脚手架</a></h4><div class="excerpt"></div><ul class="meta"><li><i class="icon icon-author"></i>leehao</li><li><i class="icon icon-clock"></i>28 Minutes</li><li><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Gulp/">Gulp</a><span class="category-list-count">1</span></li></ul></li></ul></li><li> <p class="date">May 29, 2016</p><h4 class="title"><a href="/2016/05/29/Github/">git 常用命令</a></h4><div class="excerpt"></div><ul class="meta"><li><i class="icon icon-author"></i>leehao</li><li><i class="icon icon-clock"></i>5 Minutes</li><li><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li></ul></li></ul></li><li> <p class="date">October 10, 2015</p><h4 class="title"><a href="/2015/10/10/HTTP/">HTTP</a></h4><div class="excerpt"></div><ul class="meta"><li><i class="icon icon-author"></i>leehao</li><li><i class="icon icon-clock"></i>19 Minutes</li><li><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/">HTTP</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul><ul class="pagination"><li class="current"><a>1</a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/leehao92" title="Github" target="_blank"><i class="icon icon-github"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2017 leehao</p></div></div></div><script>var wrap = document.getElementById('wrap');
-window.onload = function () {
-  wrap.className += ' done';
-}</script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>leehao&#39;s bolg | 只有永远躺在泥坑里的人,才不会再掉进坑里. ——G.W.F. Hegel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="leehao&apos;s bolg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="leehao&#39;s bolg">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="leehao&#39;s bolg">
+<meta property="og:description" content="leehao&apos;s bolg">
+<meta property="og:locale" content="CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="leehao&#39;s bolg">
+<meta name="twitter:description" content="leehao&apos;s bolg">
+    
+        <link rel="alternate" type="application/atom+xml" title="leehao&#39;s bolg" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">leehao</h5>
+          <a href="mailto:18518653080@163.com" title="18518653080@163.com" class="mail">18518653080@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/leehao92" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">leehao&#39;s bolg</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header index-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">leehao&#39;s bolg</h1>
+        <h5 class="subtitle">
+            
+                只有永远躺在泥坑里的人,才不会再掉进坑里. ——G.W.F. Hegel
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+<div class="container body-wrap">
+
+    <ul class="post-list">
+    
+        <li class="post-list-item fade">
+            <article id="post-CasperJS"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-02-03 13:28:58" datetime="2017-02-03T05:28:58.000Z"  itemprop="datePublished">2017-02-03</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/CasperJS/">CasperJS</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/02/03/CasperJS/">CasperJS 技术笔记</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        
+爬虫 &amp;&amp; 前端页面自动化检测
+在日常开发中，项目过于庞大，比如修改某个变量（例如 LESS），就可能会引起其他页面的显示异常
+如果交给测试的伙伴进行测试也比较耗时，所以利用自动化检测工具让开发人员写好测试脚本进行自测，可以提高排错效率，有可以及时发现问题。
+缺点就是脚本需要开发人员自己写…，可能会加大开发成本。
+
+PhantomJS 可以模拟浏览器（V8引擎），发出一些请...
+    
+
+        <a href="/2017/02/03/CasperJS/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端页面自动化测试/">前端页面自动化测试</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-PhantomJS"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-01-12 00:08:58" datetime="2017-01-11T16:08:58.000Z"  itemprop="datePublished">2017-01-12</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/PhantomJS/">PhantomJS</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/01/12/PhantomJS/">PhantomJS</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        
+近期老大分配任务，让我们写页面时，完成自动化测试，防止跨页面异常，总结了些技术点。
+Phantom JS 是一个服务器端的 JavaScript API 的 WebKithttp://imweb.io/topic/560b402ac2317a8c3e08621c
+
+配置环境变量即可
+
+phantomjs hello.js  运行
+
+
+代码案例12console.log('Hello, wo...
+    
+
+        <a href="/2017/01/12/PhantomJS/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端页面自动化测试/">前端页面自动化测试</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-React"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2016-12-10 19:00:41" datetime="2016-12-10T11:00:41.000Z"  itemprop="datePublished">2016-12-10</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/React/">React</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/12/10/React/">React</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        
+Virtual DOM ·虚拟·React 在每次需要渲染时，会先比较当前 DOM 内容和待渲染内容的差异， 然后再决定如何最优地更新 DOM
+Props（属性，就是 element 上的 attrs，换个名字 property，变成复数，即 props）State 主要记录状态。
+JSX 语法就是 JS 与 HTML 的混写。
+关于 HTML 转义React 会将所有要显示到 DOM 的...
+    
+
+        <a href="/2016/12/10/React/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-Webpack"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2016-12-03 10:00:41" datetime="2016-12-03T02:00:41.000Z"  itemprop="datePublished">2016-12-03</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Webpack/">Webpack</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/12/03/Webpack/">Webpack</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        
+参考资料官网：http://webpack.github.io/docs/
+Webpack-handlebook:  http://zhaoda.net/webpack-handbook/
+Gitbook: http://fakefish.github.io/react-webpack-cookbook/index.html
+
+Gulp 任务型处理Webpack 也是构建工具，适合处理 S...
+    
+
+        <a href="/2016/12/03/Webpack/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自动化构建工具/">自动化构建工具</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-Gulp"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2016-11-10 01:01:00" datetime="2016-11-09T17:01:00.000Z"  itemprop="datePublished">2016-11-10</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Gulp/">Gulp</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/11/10/Gulp/">Gulp 脚手架</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        
+扯淡最近公司项目使用的是 Gulp，之前用过一些，但是该忘的都忘了，自己也懒得去翻以前的笔记，正好博客起了作用（可以鞭策我整理和学习）(●’◡’●)
+
+插件总览12345678910111213141516171819202122232425var gulp = require('gulp');// 编译 LESSvar less = require('gulp-less');    //...
+    
+
+        <a href="/2016/11/10/Gulp/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自动化构建工具/">自动化构建工具</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-Github"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2016-05-29 02:32:12" datetime="2016-05-28T18:32:12.000Z"  itemprop="datePublished">2016-05-29</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Git/">Git</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/05/29/Github/">git 常用命令</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        
+SVN 集中式服务器
+代码库在集中式服务器中
+
+干完活再推送到中央服务器
+
+
+分布式
+每人的计算机都有自己代码库
+
+实现多人协作
+
+
+A 人修改 文件1，B 人同事修改 文件1
+A 与 B 两人相互推送就可以看到对方的修改。
+在实际开发中并不会 A 与 B 直接交换。
+通常有一个计算机充当交换的媒介。
+
+git 常用命令
+$ pwd #显示当前目录
+
+$ git diff readme.m...
+    
+
+        <a href="/2016/05/29/Github/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-HTTP"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2015-10-10 10:18:07" datetime="2015-10-10T02:18:07.000Z"  itemprop="datePublished">2015-10-10</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/HTTP/">HTTP</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/10/10/HTTP/">HTTP</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        
+HTTP 简介HTTPHyperText  Transfer Protocol ( 超文本传输协议 )，是工作在 tcp/ip 协议基础上的，所有的 WWW 文件都必须遵守这个标准。设计 HTTP最初的目的是为了提供一种发布和接收 HTML 页面的方法。
+特点
+HTTP 协议是建立在 TCP/IP 协议基础上
+HTTP 协议全称 超文本传输协议
+HTTP 协议 1.0 、1.1 版本，目前...
+    
+
+        <a href="/2015/10/10/HTTP/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTTP/">HTTP</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+    </ul>
+
+    
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>leehao &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/&title=leehao's bolg&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/&title=leehao's bolg&source=leehao's bolg" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=leehao's bolg&url=http://yoursite.com/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAAAAAAZai4+AAABW0lEQVR42u3aQQ7DIAxE0dz/0qnUVaUUMjNOF7W/VxVKw8sCMIbjkON8x6r9M/T/PhCwYDVindu4PqO0XNv1vmDBmszaD2y9S/33jQEWLFjC6/QFGBYsWL9muV3CggVrz1KSZmWy0JPvx3J5WLBasCrLbSVRfri+BQvW37JOM9xlOwtYsKax9CLRfhRXtrhGBgELVlPWSpptSvVk+qYvWLBgRUWiynWEL++BBQuW0KUy1BXWsgUWrGEsN2nOQNJRij67wILVlKUUZCvLuVJsks5gYcFqyqqUbt0jE2PqgQVrMMu9fJAdcCqTCCxY01jZQUi2uS2d/MCC1ZpVuXCQlWul1BwWrGGsLOXdd6kv5PVEHBasTqxsUtDTZXcqgQVrMisr/WTbVOkZWLBgyYPcPcMxMgVYsGA9tL1Uik3Lz4AFayQrS5rd1NmYE2DBGsbKrgtkxFI1CxasnqwXXY7FbVPN83MAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '回来呀，么么哒';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '爱我你就点点我';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

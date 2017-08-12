@@ -1,4 +1,190 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description" content="leehao's bolg"><meta name="keywords" content="Nodejs, Reactjs"><title>React - leehao</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.png"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com/leehao92"><span>Github</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">React</h1><ul class="meta"><li><i class="icon icon-author"></i>leehao</li><li><i class="icon icon-clock"></i>37 Minutes</li><li><i class="icon icon-calendar"></i>December 10, 2016</li></ul></div></div><div class="article-content" style="max-width:800px"><hr>
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>React | leehao&#39;s bolg | 只有永远躺在泥坑里的人,才不会再掉进坑里. ——G.W.F. Hegel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="React">
+    <meta name="description" content="Virtual DOM ·虚拟·React 在每次需要渲染时，会先比较当前 DOM 内容和待渲染内容的差异， 然后再决定如何最优地更新 DOM Props（属性，就是 element 上的 attrs，换个名字 property，变成复数，即 props）State 主要记录状态。 JSX 语法就是 JS 与 HTML 的混写。 关于 HTML 转义React 会将所有要显示到 DOM 的字符串">
+<meta name="keywords" content="React">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React">
+<meta property="og:url" content="http://yoursite.com/2016/12/10/React/index.html">
+<meta property="og:site_name" content="leehao&#39;s bolg">
+<meta property="og:description" content="Virtual DOM ·虚拟·React 在每次需要渲染时，会先比较当前 DOM 内容和待渲染内容的差异， 然后再决定如何最优地更新 DOM Props（属性，就是 element 上的 attrs，换个名字 property，变成复数，即 props）State 主要记录状态。 JSX 语法就是 JS 与 HTML 的混写。 关于 HTML 转义React 会将所有要显示到 DOM 的字符串">
+<meta property="og:locale" content="CN">
+<meta property="og:updated_time" content="2017-03-12T01:17:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React">
+<meta name="twitter:description" content="Virtual DOM ·虚拟·React 在每次需要渲染时，会先比较当前 DOM 内容和待渲染内容的差异， 然后再决定如何最优地更新 DOM Props（属性，就是 element 上的 attrs，换个名字 property，变成复数，即 props）State 主要记录状态。 JSX 语法就是 JS 与 HTML 的混写。 关于 HTML 转义React 会将所有要显示到 DOM 的字符串">
+    
+        <link rel="alternate" type="application/atom+xml" title="leehao&#39;s bolg" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">leehao</h5>
+          <a href="mailto:18518653080@163.com" title="18518653080@163.com" class="mail">18518653080@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/leehao92" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">React</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">React</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-12-10T11:00:41.000Z" itemprop="datePublished" class="page-time">
+  2016-12-10
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/React/">React</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Virtual-DOM-·虚拟·"><span class="post-toc-number">1.</span> <span class="post-toc-text">Virtual DOM ·虚拟·</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JSX-语法"><span class="post-toc-number">2.</span> <span class="post-toc-text">JSX 语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#关于-HTML-转义"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">关于 HTML 转义</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#属性扩散"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">属性扩散</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注释"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">注释</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#顶层-API"><span class="post-toc-number">3.</span> <span class="post-toc-text">顶层 API</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#生命周期"><span class="post-toc-number">4.</span> <span class="post-toc-text">生命周期</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES5-与-ES6"><span class="post-toc-number">5.</span> <span class="post-toc-text">ES5 与 ES6</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#箭头函数"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">箭头函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#静态属性"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">静态属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#React-书写规范"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">React 书写规范</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#事件"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">事件</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件移除"><span class="post-toc-number">6.</span> <span class="post-toc-text">事件移除</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#获取-DOM-元素"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">获取 DOM 元素</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#表单"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">表单</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#props-属性校验"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">props 属性校验</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Context"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">Context</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#动画"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">动画</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-React"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">React</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016-12-10 19:00:41" datetime="2016-12-10T11:00:41.000Z"  itemprop="datePublished">2016-12-10</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/React/">React</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <hr>
 <h3 id="Virtual-DOM-·虚拟·"><a href="#Virtual-DOM-·虚拟·" class="headerlink" title="Virtual DOM ·虚拟·"></a>Virtual DOM ·虚拟·</h3><p>React 在每次需要渲染时，会先比较当前 DOM 内容和待渲染内容的差异， 然后再决定如何最优地更新 DOM</p>
 <p>Props（属性，就是 element 上的 attrs，换个名字 property，变成复数，即 props）State 主要记录状态。</p>
 <h3 id="JSX-语法"><a href="#JSX-语法" class="headerlink" title="JSX 语法"></a>JSX 语法</h3><p>就是 JS 与 HTML 的混写。</p>
@@ -66,16 +252,294 @@
 <p>ES6 写法</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>(props,context)&#123;</div><div class="line"><span class="keyword">super</span>(props,context)</div><div class="line">&#125;</div><div class="line"><span class="keyword">static</span> contextTypes=&#123;</div><div class="line">xx:xx</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h4><p><code>react-addons-css-transition-group</code></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// react中的dom监听事件</span></div><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> ReactCSSTransitionGroup <span class="keyword">from</span> <span class="string">'react-addons-css-transition-group'</span></div><div class="line"><span class="keyword">import</span> <span class="string">'./animate.css'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Animate</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(props) &#123;</div><div class="line">        <span class="keyword">super</span>(props);</div><div class="line">        <span class="keyword">this</span>.state = &#123;<span class="attr">items</span>: [<span class="string">'hello'</span>, <span class="string">'world'</span>, <span class="string">'click'</span>, <span class="string">'me'</span>]&#125;;</div><div class="line">        <span class="keyword">this</span>.handleAdd = <span class="keyword">this</span>.handleAdd.bind(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    handleAdd() &#123;</div><div class="line">        <span class="keyword">const</span> newItems = <span class="keyword">this</span>.state.items.concat([</div><div class="line">            prompt(<span class="string">'Enter some text'</span>)</div><div class="line">        ]);</div><div class="line">        <span class="keyword">this</span>.setState(&#123;<span class="attr">items</span>: newItems&#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    handleRemove(i) &#123;</div><div class="line">        <span class="keyword">let</span> newItems = <span class="keyword">this</span>.state.items.slice();</div><div class="line">        newItems.splice(i, <span class="number">1</span>);</div><div class="line">        <span class="keyword">this</span>.setState(&#123;<span class="attr">items</span>: newItems&#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">const</span> items = <span class="keyword">this</span>.state.items.map(<span class="function">(<span class="params">item, i</span>) =&gt;</span> (</div><div class="line">            &lt;div key=&#123;item&#125; onClick=&#123;() =&gt; <span class="keyword">this</span>.handleRemove(i)&#125;&gt;</div><div class="line">                &#123;item&#125;</div><div class="line">            &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">        ));</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">        return (</span></div><div class="line"><span class="regexp">            &lt;div&gt;</span></div><div class="line"><span class="regexp">                &lt;button onClick=&#123;this.handleAdd&#125;&gt;Add Item1&lt;/</span>button&gt;</div><div class="line">                &#123;<span class="comment">/*这个组件虽然叫动画，但是它只负责显示隐藏的动画*/</span>&#125;</div><div class="line">                &#123;<span class="comment">/*你想让谁有显示隐藏的动画你就用ReactCSSTransitionGroup包裹谁*/</span>&#125;</div><div class="line">                &#123;<span class="comment">/*后添加进去的元素和删除的元素才有动画效果，同时添加元素和ReactCSSTransitionGroup是没有动画效果的*/</span>&#125;</div><div class="line">                &#123;<span class="comment">/*transitionName 表示引入 css 文件样式的 前缀（看CSS文件）*/</span>&#125;</div><div class="line">                &#123;<span class="comment">/*是否开启 transitionAppear 初始动画*/</span>&#125;</div><div class="line">                &#123;<span class="comment">/*component 指定动画元素被哪个元素包裹*/</span>&#125;</div><div class="line">                &#123;<span class="comment">/*加上 transitionAppear 会有警告 */</span>&#125;</div><div class="line">                &lt;ReactCSSTransitionGroup</div><div class="line">                    component=<span class="string">"div"</span></div><div class="line">                    transitionName=<span class="string">"example"</span></div><div class="line">                    transitionEnterTimeout=&#123;<span class="number">500</span>&#125;</div><div class="line">                    transitionLeaveTimeout=&#123;<span class="number">300</span>&#125;&gt;</div><div class="line">                    &#123;items&#125;</div><div class="line">                &lt;<span class="regexp">/ReactCSSTransitionGroup&gt;</span></div><div class="line"><span class="regexp">            &lt;/</span>div&gt;</div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/*-enter是进入的时候的初始状态*/</span></div><div class="line">.example-enter &#123;</div><div class="line">    opacity: <span class="number">0.01</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*-enter-active是进入时候的结束状态*/</span></div><div class="line">.example-enter.example-enter-active &#123;</div><div class="line">    opacity: <span class="number">1</span>;</div><div class="line">    transition: opacity <span class="number">500</span>ms ease-<span class="keyword">in</span>;</div><div class="line">&#125;</div><div class="line">.example-leave &#123;</div><div class="line">    opacity: <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line">.example-leave.example-leave-active &#123;</div><div class="line">    opacity: <span class="number">0.01</span>;</div><div class="line">    transition: opacity <span class="number">300</span>ms ease-<span class="keyword">in</span>;</div><div class="line">&#125;</div><div class="line">.example-appear &#123;</div><div class="line">    opacity: <span class="number">0.01</span>;</div><div class="line">&#125;</div><div class="line">.example-appear.example-appear-active &#123;</div><div class="line">    opacity: <span class="number">1</span>;</div><div class="line">    transition: opacity <span class="number">.5</span>s ease-<span class="keyword">in</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></div><div class="article-meta" style="max-width:800px"><div class="tags"><i class="icon icon-tag"></i><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li></ul></div><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a><span class="category-list-count">1</span></li></ul></div></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cj60b8cvo000aabnwmtdzeuwh" data-title="React" data-url="http://yoursite.com/2016/12/10/React/" site-name="leehao"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
-var duoshuoQuery = {short_name: siteName};
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// react中的dom监听事件</span></div><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> ReactCSSTransitionGroup <span class="keyword">from</span> <span class="string">'react-addons-css-transition-group'</span></div><div class="line"><span class="keyword">import</span> <span class="string">'./animate.css'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Animate</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(props) &#123;</div><div class="line">        <span class="keyword">super</span>(props);</div><div class="line">        <span class="keyword">this</span>.state = &#123;<span class="attr">items</span>: [<span class="string">'hello'</span>, <span class="string">'world'</span>, <span class="string">'click'</span>, <span class="string">'me'</span>]&#125;;</div><div class="line">        <span class="keyword">this</span>.handleAdd = <span class="keyword">this</span>.handleAdd.bind(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    handleAdd() &#123;</div><div class="line">        <span class="keyword">const</span> newItems = <span class="keyword">this</span>.state.items.concat([</div><div class="line">            prompt(<span class="string">'Enter some text'</span>)</div><div class="line">        ]);</div><div class="line">        <span class="keyword">this</span>.setState(&#123;<span class="attr">items</span>: newItems&#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    handleRemove(i) &#123;</div><div class="line">        <span class="keyword">let</span> newItems = <span class="keyword">this</span>.state.items.slice();</div><div class="line">        newItems.splice(i, <span class="number">1</span>);</div><div class="line">        <span class="keyword">this</span>.setState(&#123;<span class="attr">items</span>: newItems&#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">const</span> items = <span class="keyword">this</span>.state.items.map(<span class="function">(<span class="params">item, i</span>) =&gt;</span> (</div><div class="line">            &lt;div key=&#123;item&#125; onClick=&#123;() =&gt; <span class="keyword">this</span>.handleRemove(i)&#125;&gt;</div><div class="line">                &#123;item&#125;</div><div class="line">            &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">        ));</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">        return (</span></div><div class="line"><span class="regexp">            &lt;div&gt;</span></div><div class="line"><span class="regexp">                &lt;button onClick=&#123;this.handleAdd&#125;&gt;Add Item1&lt;/</span>button&gt;</div><div class="line">                &#123;<span class="comment">/*这个组件虽然叫动画，但是它只负责显示隐藏的动画*/</span>&#125;</div><div class="line">                &#123;<span class="comment">/*你想让谁有显示隐藏的动画你就用ReactCSSTransitionGroup包裹谁*/</span>&#125;</div><div class="line">                &#123;<span class="comment">/*后添加进去的元素和删除的元素才有动画效果，同时添加元素和ReactCSSTransitionGroup是没有动画效果的*/</span>&#125;</div><div class="line">                &#123;<span class="comment">/*transitionName 表示引入 css 文件样式的 前缀（看CSS文件）*/</span>&#125;</div><div class="line">                &#123;<span class="comment">/*是否开启 transitionAppear 初始动画*/</span>&#125;</div><div class="line">                &#123;<span class="comment">/*component 指定动画元素被哪个元素包裹*/</span>&#125;</div><div class="line">                &#123;<span class="comment">/*加上 transitionAppear 会有警告 */</span>&#125;</div><div class="line">                &lt;ReactCSSTransitionGroup</div><div class="line">                    component=<span class="string">"div"</span></div><div class="line">                    transitionName=<span class="string">"example"</span></div><div class="line">                    transitionEnterTimeout=&#123;<span class="number">500</span>&#125;</div><div class="line">                    transitionLeaveTimeout=&#123;<span class="number">300</span>&#125;&gt;</div><div class="line">                    &#123;items&#125;</div><div class="line">                &lt;<span class="regexp">/ReactCSSTransitionGroup&gt;</span></div><div class="line"><span class="regexp">            &lt;/</span>div&gt;</div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/*-enter是进入的时候的初始状态*/</span></div><div class="line">.example-enter &#123;</div><div class="line">    opacity: <span class="number">0.01</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*-enter-active是进入时候的结束状态*/</span></div><div class="line">.example-enter.example-enter-active &#123;</div><div class="line">    opacity: <span class="number">1</span>;</div><div class="line">    transition: opacity <span class="number">500</span>ms ease-<span class="keyword">in</span>;</div><div class="line">&#125;</div><div class="line">.example-leave &#123;</div><div class="line">    opacity: <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line">.example-leave.example-leave-active &#123;</div><div class="line">    opacity: <span class="number">0.01</span>;</div><div class="line">    transition: opacity <span class="number">300</span>ms ease-<span class="keyword">in</span>;</div><div class="line">&#125;</div><div class="line">.example-appear &#123;</div><div class="line">    opacity: <span class="number">0.01</span>;</div><div class="line">&#125;</div><div class="line">.example-appear.example-appear-active &#123;</div><div class="line">    opacity: <span class="number">1</span>;</div><div class="line">    transition: opacity <span class="number">.5</span>s ease-<span class="keyword">in</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-03-12T01:17:10.000Z" itemprop="dateUpdated">2017-03-12 09:17:10</time>
+</span><br>
+
+
+        
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="leehao">
+            leehao
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2016/12/10/React/&title=《React》 — leehao's bolg&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2016/12/10/React/&title=《React》 — leehao's bolg&source=leehao's bolg" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/12/10/React/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React》 — leehao's bolg&url=http://yoursite.com/2016/12/10/React/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2016/12/10/React/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/01/12/PhantomJS/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">PhantomJS</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/12/03/Webpack/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Webpack</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+<section class="comments" id="comments">
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
+    <!-- UY END -->
+</section>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我喝杯咖啡吧 😁
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>leehao &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2016/12/10/React/&title=《React》 — leehao's bolg&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2016/12/10/React/&title=《React》 — leehao's bolg&source=leehao's bolg" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/12/10/React/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React》 — leehao's bolg&url=http://yoursite.com/2016/12/10/React/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2016/12/10/React/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABuUlEQVR42u3aQW7DMAwEQP//0y7QaxFnSVm0C4xPAeJK0xwIcqXjiJ/z90m+PS+fv+8cOx5cXNxlbr7Bp7+6Xu3T+9V/EhcXd56bl6cVdEL/YsPFxX0ZN3m/2gzh4uL+d+698xYuLu77ub0gIxlmkpK3ZVbDxcVd4K4Unbs+b8x3cXFxi9yz+FSbmzxyjXbHxcUd4V4vVG1NrldI2qOozOHi4m7mJuHmysWLlcscUQnDxcV9iNsLQfJrFnkzhIuLO8/tNSu9ILXZPOHi4o5wq0ee1Q0SXO9iKC4u7j5ub7kkTu0d1USnwbi4uIPc6jbJAHNXUIKLi/ss995RJwlSC60SLi7uILcaaPYuT6wEIri4uPPcfLBJoszqEUuhUOLi4o5we81NtSRVG6YvPw0uLu5m7nowmoenvQAFFxf3Ke76hct8fFqKZXFxcQe566FGdfvqD9RMYnBxcVvc3jbJyJQc31bHJFxc3EludYzpXeS6rRnCxcUd5D5wKNK6/oWLi/s2bmHRYOU8im0WMlxc3EFuNS6pXv/CxcV9D7dw2BmXuepAFa2Pi4s7wu0dgfSOXauFEhcXd5z7A4DivlW3dyprAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
 (function() {
-  var ds = document.createElement('script');
-  ds.type = 'text/javascript';ds.async = true;
-  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-  ds.charset = 'UTF-8';
-  (document.getElementsByTagName('head')[0] 
-  || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/2017/01/12/PhantomJS/"><i class="icon icon-arror-left"></i></a></li><li><a href="/2016/12/03/Webpack/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/leehao92" title="Github" target="_blank"><i class="icon icon-github"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2017 leehao</p></div></div></div><script>var wrap = document.getElementById('wrap');
-window.onload = function () {
-  wrap.className += ' done';
-}</script></body></html>
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '回来呀，么么哒';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '爱我你就点点我';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

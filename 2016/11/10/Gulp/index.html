@@ -1,4 +1,190 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description" content="leehao's bolg"><meta name="keywords" content="Nodejs, Reactjs"><title>Gulp 脚手架 - leehao</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.png"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com/leehao92"><span>Github</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">Gulp 脚手架</h1><ul class="meta"><li><i class="icon icon-author"></i>leehao</li><li><i class="icon icon-clock"></i>28 Minutes</li><li><i class="icon icon-calendar"></i>November 10, 2016</li></ul></div></div><div class="article-content" style="max-width:800px"><hr>
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Gulp 脚手架 | leehao&#39;s bolg | 只有永远躺在泥坑里的人,才不会再掉进坑里. ——G.W.F. Hegel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="自动化构建工具">
+    <meta name="description" content="扯淡最近公司项目使用的是 Gulp，之前用过一些，但是该忘的都忘了，自己也懒得去翻以前的笔记，正好博客起了作用（可以鞭策我整理和学习）(●’◡’●)  插件总览12345678910111213141516171819202122232425var gulp = require(&apos;gulp&apos;);// 编译 LESSvar less = require(&apos;gulp-less&apos;);    // 压缩">
+<meta name="keywords" content="自动化构建工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gulp 脚手架">
+<meta property="og:url" content="http://yoursite.com/2016/11/10/Gulp/index.html">
+<meta property="og:site_name" content="leehao&#39;s bolg">
+<meta property="og:description" content="扯淡最近公司项目使用的是 Gulp，之前用过一些，但是该忘的都忘了，自己也懒得去翻以前的笔记，正好博客起了作用（可以鞭策我整理和学习）(●’◡’●)  插件总览12345678910111213141516171819202122232425var gulp = require(&apos;gulp&apos;);// 编译 LESSvar less = require(&apos;gulp-less&apos;);    // 压缩">
+<meta property="og:locale" content="CN">
+<meta property="og:updated_time" content="2017-03-12T01:36:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gulp 脚手架">
+<meta name="twitter:description" content="扯淡最近公司项目使用的是 Gulp，之前用过一些，但是该忘的都忘了，自己也懒得去翻以前的笔记，正好博客起了作用（可以鞭策我整理和学习）(●’◡’●)  插件总览12345678910111213141516171819202122232425var gulp = require(&apos;gulp&apos;);// 编译 LESSvar less = require(&apos;gulp-less&apos;);    // 压缩">
+    
+        <link rel="alternate" type="application/atom+xml" title="leehao&#39;s bolg" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">leehao</h5>
+          <a href="mailto:18518653080@163.com" title="18518653080@163.com" class="mail">18518653080@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/leehao92" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Gulp 脚手架</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Gulp 脚手架</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-11-09T17:01:00.000Z" itemprop="datePublished" class="page-time">
+  2016-11-10
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Gulp/">Gulp</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#扯淡"><span class="post-toc-number">1.</span> <span class="post-toc-text">扯淡</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插件总览"><span class="post-toc-number">2.</span> <span class="post-toc-text">插件总览</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#具体使用"><span class="post-toc-number">3.</span> <span class="post-toc-text">具体使用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#任务队列"><span class="post-toc-number">4.</span> <span class="post-toc-text">任务队列</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#队列插件"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">队列插件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cb-与-队列插件-结合使用"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">cb 与 队列插件 结合使用</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Gulp"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Gulp 脚手架</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016-11-10 01:01:00" datetime="2016-11-09T17:01:00.000Z"  itemprop="datePublished">2016-11-10</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Gulp/">Gulp</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <hr>
 <h3 id="扯淡"><a href="#扯淡" class="headerlink" title="扯淡"></a>扯淡</h3><p>最近公司项目使用的是 Gulp，之前用过一些，但是该忘的都忘了，自己也懒得去翻以前的笔记，正好博客起了作用（可以鞭策我整理和学习）(●’◡’●)</p>
 <hr>
 <h3 id="插件总览"><a href="#插件总览" class="headerlink" title="插件总览"></a>插件总览</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"><span class="comment">// 编译 LESS</span></div><div class="line"><span class="keyword">var</span> less = <span class="built_in">require</span>(<span class="string">'gulp-less'</span>);    </div><div class="line"><span class="comment">// 压缩 CSS</span></div><div class="line"><span class="keyword">var</span> cssmin = <span class="built_in">require</span>(<span class="string">'gulp-cssmin'</span>);    </div><div class="line"><span class="comment">// 自动添加 webkit 前缀，写代码的时候尽量写全，不要太相信这个插件</span></div><div class="line"><span class="keyword">var</span> autoprefixer = <span class="built_in">require</span>(<span class="string">'gulp-autopreixer'</span>);</div><div class="line"><span class="comment">// 重命名文件   </span></div><div class="line"><span class="keyword">var</span> rename = <span class="built_in">require</span>(<span class="string">'gulp-rename'</span>);    </div><div class="line"><span class="comment">// 图片压缩</span></div><div class="line"><span class="keyword">var</span> imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>);</div><div class="line"><span class="comment">// JS 压缩  </span></div><div class="line"><span class="keyword">var</span> jsMin = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>); </div><div class="line"><span class="comment">// JS 合并</span></div><div class="line"><span class="keyword">var</span> jsConcat = <span class="built_in">require</span>(<span class="string">'gulp-concat'</span>); </div><div class="line"><span class="comment">// HTML 压缩</span></div><div class="line"><span class="keyword">var</span> HTMLMin = <span class="built_in">require</span>(<span class="string">'gulp-htmlmin'</span>);</div><div class="line"><span class="comment">// 文件打上版本号，防止浏览器缓存 </span></div><div class="line"><span class="keyword">var</span> rev = <span class="built_in">require</span>(<span class="string">'gulp-rev'</span>);  </div><div class="line"><span class="comment">// 替换 HTML 文件中引用的文件，替换为带有版本号的文件</span></div><div class="line"><span class="keyword">var</span> revCollector = <span class="built_in">require</span>(<span class="string">'gulp-rev-collector'</span>);   </div><div class="line"><span class="comment">// 将 HTML 中 引入的多个 script 标签，替换成一个（拥有自动合并功能）</span></div><div class="line"><span class="keyword">var</span> useref = <span class="built_in">require</span>(<span class="string">'gulp-useref'</span>);</div><div class="line"><span class="comment">// 压缩    </span></div><div class="line"><span class="keyword">var</span> gulpif = <span class="built_in">require</span>(<span class="string">'gulp-if'</span>);</div></pre></td></tr></table></figure>
@@ -9,16 +195,294 @@
 <h4 id="队列插件"><a href="#队列插件" class="headerlink" title="队列插件"></a>队列插件</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 可以控制任务的执行顺序，但是不能解决异步问题</span></div><div class="line"><span class="comment">// 不用插件写顺序的时候，需要在每个任务后面写 [ ] 数组，填写依赖关系</span></div><div class="line"><span class="comment">// 使用插件可以一起写，很方便，直观</span></div><div class="line"><span class="comment">// 如果想要控制异步，还是需要使用 callback() 与 插件结合</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"><span class="keyword">var</span> gulpSequence = <span class="built_in">require</span>(<span class="string">'gulp-sequence'</span>);</div><div class="line"><span class="keyword">var</span> del = <span class="built_in">require</span>(<span class="string">'del'</span>);</div><div class="line">gulp.task(<span class="string">'default'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'def'</span>);</div><div class="line">&#125;);</div><div class="line">gulp.task(<span class="string">'t1'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'t1'</span>);</div><div class="line">&#125;);</div><div class="line">gulp.task(<span class="string">'t2'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'t2'</span>);</div><div class="line">&#125;);</div><div class="line">gulp.task(<span class="string">'t3'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'t3'</span>);</div><div class="line">&#125;);</div><div class="line">gulp.task(<span class="string">'sequence'</span>, gulpSequence([<span class="string">'t2'</span>,<span class="string">'t1'</span>],<span class="string">'t3'</span>,<span class="string">'default'</span>));</div></pre></td></tr></table></figure>
 <h4 id="cb-与-队列插件-结合使用"><a href="#cb-与-队列插件-结合使用" class="headerlink" title="cb 与 队列插件 结合使用"></a>cb 与 队列插件 结合使用</h4><p>cb 一般写在异步回调函数内。</p>
 <p>关于 cb 自己的理解：就像 JAVA 多线程处理同步的锁一样，只要 task 的回调函数有 cb，这个任务就会在内存中执行，其他任务不会执行，直到 cb( )，才会释放锁，其他的 task 才会继续执行。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// gulp 的任务是控制执行流程，webpack 的任务是处理复杂引用的依赖</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"><span class="keyword">var</span> del = <span class="built_in">require</span>(<span class="string">'del'</span>);	<span class="comment">// 删除文件和目录</span></div><div class="line"><span class="keyword">var</span> gulpSequence = <span class="built_in">require</span>(<span class="string">'gulp-sequence'</span>);	<span class="comment">// 按顺序执行</span></div><div class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">"webpack"</span>);	<span class="comment">// 引入 webpack 的本地模块</span></div><div class="line"></div><div class="line"><span class="comment">// 引入 wbpack 的配置文件，webpackConfig 中有 exports</span></div><div class="line"><span class="keyword">var</span> webpackConfig = <span class="built_in">require</span>(<span class="string">"./webpack.publish.config.js"</span>);</div><div class="line"></div><div class="line"><span class="comment">// default 任务</span></div><div class="line">gulp.task(<span class="string">'default'</span>,[<span class="string">'sequence'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"项目构建成功"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 流程控制</span></div><div class="line">gulp.task(<span class="string">'sequence'</span>, gulpSequence(<span class="string">'clean'</span>,<span class="string">'webpack'</span>));</div><div class="line"></div><div class="line"><span class="comment">// 删除文件和文件夹</span></div><div class="line">gulp.task(<span class="string">'clean'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">cb</span>) </span>&#123;</div><div class="line">    <span class="comment">//del('dist);   // 如果直接给 dist 的目录，项目启动的顺序还有清除结果会报错，所以要写的更详细一些</span></div><div class="line">    del([<span class="string">'dist/*.js'</span>,<span class="string">'dist/*.css'</span>,<span class="string">'dist/images'</span>,<span class="string">'dist/*.html'</span>]).then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        cb();</div><div class="line">    &#125;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 写一个任务，在 gulp 中执行 webpack 的构建</span></div><div class="line"><span class="comment">// gulp 负责任务流程部分的操作，webpack 负责复杂模块系统的引用分离工作</span></div><div class="line">gulp.task(<span class="string">'webpack'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">cb</span>) </span>&#123;</div><div class="line">    <span class="comment">// 执行 webpack 的构建任务</span></div><div class="line">    webpack(webpackConfig, <span class="function"><span class="keyword">function</span> (<span class="params">err, stats</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (err)&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"构建任务失败"</span>);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            cb();</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></div><div class="article-meta" style="max-width:800px"><div class="tags"><i class="icon icon-tag"></i><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/自动化构建工具/">自动化构建工具</a><span class="tag-list-count">2</span></li></ul></div><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Gulp/">Gulp</a><span class="category-list-count">1</span></li></ul></div></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cj60b8cve0005abnwtsutd9lj" data-title="Gulp 脚手架" data-url="http://yoursite.com/2016/11/10/Gulp/" site-name="leehao"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
-var duoshuoQuery = {short_name: siteName};
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// gulp 的任务是控制执行流程，webpack 的任务是处理复杂引用的依赖</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"><span class="keyword">var</span> del = <span class="built_in">require</span>(<span class="string">'del'</span>);	<span class="comment">// 删除文件和目录</span></div><div class="line"><span class="keyword">var</span> gulpSequence = <span class="built_in">require</span>(<span class="string">'gulp-sequence'</span>);	<span class="comment">// 按顺序执行</span></div><div class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">"webpack"</span>);	<span class="comment">// 引入 webpack 的本地模块</span></div><div class="line"></div><div class="line"><span class="comment">// 引入 wbpack 的配置文件，webpackConfig 中有 exports</span></div><div class="line"><span class="keyword">var</span> webpackConfig = <span class="built_in">require</span>(<span class="string">"./webpack.publish.config.js"</span>);</div><div class="line"></div><div class="line"><span class="comment">// default 任务</span></div><div class="line">gulp.task(<span class="string">'default'</span>,[<span class="string">'sequence'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"项目构建成功"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 流程控制</span></div><div class="line">gulp.task(<span class="string">'sequence'</span>, gulpSequence(<span class="string">'clean'</span>,<span class="string">'webpack'</span>));</div><div class="line"></div><div class="line"><span class="comment">// 删除文件和文件夹</span></div><div class="line">gulp.task(<span class="string">'clean'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">cb</span>) </span>&#123;</div><div class="line">    <span class="comment">//del('dist);   // 如果直接给 dist 的目录，项目启动的顺序还有清除结果会报错，所以要写的更详细一些</span></div><div class="line">    del([<span class="string">'dist/*.js'</span>,<span class="string">'dist/*.css'</span>,<span class="string">'dist/images'</span>,<span class="string">'dist/*.html'</span>]).then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        cb();</div><div class="line">    &#125;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 写一个任务，在 gulp 中执行 webpack 的构建</span></div><div class="line"><span class="comment">// gulp 负责任务流程部分的操作，webpack 负责复杂模块系统的引用分离工作</span></div><div class="line">gulp.task(<span class="string">'webpack'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">cb</span>) </span>&#123;</div><div class="line">    <span class="comment">// 执行 webpack 的构建任务</span></div><div class="line">    webpack(webpackConfig, <span class="function"><span class="keyword">function</span> (<span class="params">err, stats</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (err)&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"构建任务失败"</span>);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            cb();</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-03-12T01:36:30.000Z" itemprop="dateUpdated">2017-03-12 09:36:30</time>
+</span><br>
+
+
+        
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="leehao">
+            leehao
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自动化构建工具/">自动化构建工具</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2016/11/10/Gulp/&title=《Gulp 脚手架》 — leehao's bolg&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2016/11/10/Gulp/&title=《Gulp 脚手架》 — leehao's bolg&source=leehao's bolg" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/11/10/Gulp/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Gulp 脚手架》 — leehao's bolg&url=http://yoursite.com/2016/11/10/Gulp/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2016/11/10/Gulp/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2016/12/03/Webpack/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Webpack</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/05/29/Github/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">git 常用命令</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+<section class="comments" id="comments">
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
+    <!-- UY END -->
+</section>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我喝杯咖啡吧 😁
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>leehao &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2016/11/10/Gulp/&title=《Gulp 脚手架》 — leehao's bolg&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2016/11/10/Gulp/&title=《Gulp 脚手架》 — leehao's bolg&source=leehao's bolg" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/11/10/Gulp/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Gulp 脚手架》 — leehao's bolg&url=http://yoursite.com/2016/11/10/Gulp/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2016/11/10/Gulp/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByUlEQVR42u3ay2rDMBAF0P7/T7ubLgIl6b0jS5hytArGto6zGOahr694XS/r3ZXX67/vSZ69beHi4i5zr48r2Th5f/4B7+7BxcU9z022yZ9qKYkBFxf3+dzP9+QJEC4u7n/i5qEqKX5wcXGfyZ2lIHlp1BZXN9RquLi4C9y8S7nv95b+Li4u7oh7lSt59nOLZLbvzxtwcXGPcNtxyHpSMhvD4OLinuTmRctdg5aVUgoXF/cMd+XQVcvKw1yU4uDi4m7jtsew2gFMWwL9MWjBxcV9ALfNK/KwNdwXFxf3CDc/XJWXQ/mHzcoqXFzc3dy8IbLSMG0PZLzdFxcX9wi3DUMrrdV8EBuFTlxc3M3cPIlZb4nekAzh4uIe4SZhZXZP+xntOBYXF3cftx1+tEesZk3V4hwZLi7uNu4M3TZQ2uFrVPzg4uJu4+bjk3ZEuiULw8XF3ca9yjULTO1fU3RTcHFxN3Db4NIOWtrEKCp+cHFxj3Dz4DUbiyaBr/gYXFzcg9y80dkmTCvlUNTfxcXFfQw3b5vmqU+Uf+Hi4j6Smycr9UGrHSkOLi7uArdtkq4nPcPjHbi4uEe4s8HnSmGTt0eX+ru4uLgT7je9ouIx2pqJiAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
 (function() {
-  var ds = document.createElement('script');
-  ds.type = 'text/javascript';ds.async = true;
-  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-  ds.charset = 'UTF-8';
-  (document.getElementsByTagName('head')[0] 
-  || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/2016/12/03/Webpack/"><i class="icon icon-arror-left"></i></a></li><li><a href="/2016/05/29/Github/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/leehao92" title="Github" target="_blank"><i class="icon icon-github"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2017 leehao</p></div></div></div><script>var wrap = document.getElementById('wrap');
-window.onload = function () {
-  wrap.className += ' done';
-}</script></body></html>
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '回来呀，么么哒';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '爱我你就点点我';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
