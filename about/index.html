@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        leehao&#39;s blog.
+        about · leehao&#39;s blog.
         
     </title>
     <link rel="icon" href= /assets/favicon.png>
@@ -67,6 +67,8 @@
     
 </head>
     
+        <body class="about-body">
+    
     
 <header class="header">
 
@@ -80,13 +82,17 @@
         <div class="site-intro">
     
     <!-- 主页  -->
+    
+    
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/about-banner.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            about
             
         </h1>
         <!-- 副标题 -->
@@ -162,161 +168,12 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/12/10/React/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>React</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-Virtual DOM ·虚拟·React 在每次需要渲染时，会先比较当前 DOM 内容和待渲染内容的差异， 然后再决定如何最优地更新 DOM
-Props（属性，就是 element 上的 attrs，换个名字 property，变成复数，即 props）State 主要记录状态。
-JSX 语法就是 JS 与 HTML 的混写。
-关于 HTML 转义React 会将所有要显示到 DOM 的字符串转义，防止 XSS。
-所以如果 JSX 中含有转义后的实体字符比如 &copy; (©) 最后显示到 DOM 中不会正确显示，因为 React 自动把 &copy; 中的特殊字符转义了。有几种解...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = React>React</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/12/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/12/03/Webpack/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>Webpack</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-参考资料官网：http://webpack.github.io/docs/
-Webpack-handlebook:  http://zhaoda.net/webpack-handbook/
-Gitbook: http://fakefish.github.io/react-webpack-cookbook/index.html
+            <!-- 不可以删除，否则会调用post的layout  -->
+<main class="main about-page">
+    <article class="article-entry">
+        <p>JavaScripter</p>
 
-Gulp 任务型处理Webpack 也是构建工具，适合处理 SAP，例如 react vue ng2
-
-Webpack 脚本命令12345678910运行wp：	webpack  --config  配置文件名      默认查找，webpack.config....
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 自动化构建工具>自动化构建工具</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/12/03</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/11/10/Gulp/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>Gulp 脚手架</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-扯淡最近公司项目使用的是 Gulp，之前用过一些，但是该忘的都忘了，自己也懒得去翻以前的笔记，正好博客起了作用（可以鞭策我整理和学习）(●’◡’●)
-
-插件总览12345678910111213141516171819202122232425var gulp = require('gulp');// 编译 LESSvar less = require('gulp-less');    // 压缩 CSSvar cssmin = require('gulp-cssmin');    // 自动添加 webkit 前缀，写代码的时候尽量写全，不要太相信这个插件var autoprefixe...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 自动化构建工具>自动化构建工具</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/11/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/05/29/Github/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>git 常用命令</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-SVN 集中式服务器
-代码库在集中式服务器中
-
-干完活再推送到中央服务器
-
-
-分布式
-每人的计算机都有自己代码库
-
-实现多人协作
-
-
-A 人修改 文件1，B 人同事修改 文件1
-A 与 B 两人相互推送就可以看到对方的修改。
-在实际开发中并不会 A 与 B 直接交换。
-通常有一个计算机充当交换的媒介。
-
-git 常用命令
-$ pwd #显示当前目录
-
-$ git diff readme.md    #查看当前文件修改了什么内容
- 2.1 $ git status #告诉你有文件被修改过，用 git diff filename 可以查看修改内容
-
-$ git log     # 可以查看...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 工具>工具</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/05/29</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+    </article>
 </main>
             <!-- profile -->
             
